@@ -65,8 +65,8 @@ public class NominasController extends HttpServlet {
 				// Consulta todos los empleados
 				rs = st.executeQuery("Select * from empleados");
 				while (rs.next()) {
-					String nombre = rs.getString(1);
-					String dni = rs.getString(2);
+					String dni = rs.getString(1);
+					String nombre = rs.getString(2);
 					String sexo = rs.getString(3);
 					int categoria = rs.getInt(4);
 					double anyos = rs.getDouble(5);
@@ -126,8 +126,8 @@ public class NominasController extends HttpServlet {
 					// Consulta por dni empleado
 					rs = st.executeQuery("Select * from empleados where dni = '" + dniEmpleado + "'");
 					while (rs.next()) {
-						String nombre = rs.getString(1);
-						String dni = rs.getString(2);
+						String dni = rs.getString(1);
+						String nombre = rs.getString(2);
 						String sexo = rs.getString(3);
 						int categoria = rs.getInt(4);
 						double anyos = rs.getDouble(5);
