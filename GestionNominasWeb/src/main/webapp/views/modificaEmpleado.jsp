@@ -19,6 +19,21 @@
 			<input type="hidden" name="opcion" value="modificarEmpleado">
 
 			<div class="form-group">
+				<label for="nuevoNombre">Nuevo Nombre:</label> <input type="text"
+					name="nuevoNombre" class="form-control" id="nuevoNombre"
+					placeholder="Ingrese el nuevo nombre" required>
+			</div>
+			<br>
+
+
+			<div class="form-group">
+				<label for="nuevoSexo">Nuevo Sexo:</label> <input type="text"
+					name="nuevoSexo" class="form-control" id="nuevoSexo"
+					placeholder="Ingrese el nuevo sexo" required>
+			</div>
+			<br>
+
+			<div class="form-group">
 				<label for="dni">DNI del Empleado:</label> <input type="text"
 					name="dni" class="form-control" id="dni"
 					placeholder="Ingrese el DNI del Empleado" required>

@@ -29,7 +29,7 @@ import model.Empleado;
 @WebServlet("/NominasController")
 public class NominasController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+ 
 	/**
 	 * Constructor por defecto del servlet.
 	 */
@@ -91,7 +91,7 @@ public class NominasController extends HttpServlet {
 			requestDispatcher.forward(request, response);
 		}
 	}
-
+ 
 	/**
 	 * Método POST para manejar las solicitudes POST enviadas al servlet. Utilizado
 	 * para buscar empleados por DNI, mostrar su salario y modificar los datos de un
@@ -103,7 +103,7 @@ public class NominasController extends HttpServlet {
 	 * @throws IOException      Si ocurre un error de E/S.
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException { 
 		String opcion = request.getParameter("opcion");
 
 		if (opcion.equals("buscar")) {
@@ -153,6 +153,8 @@ public class NominasController extends HttpServlet {
 			String dniEmpleado = request.getParameter("dni");
 			int nuevaCategoria = Integer.parseInt(request.getParameter("nuevaCategoria"));
 			double nuevosAnyos = Double.parseDouble(request.getParameter("nuevosAnyos"));
+			String nuevoNombre = request.getParameter("nuevoNombre");
+			String nuevoSexo = request.getParameter("nuevoSexo");
 
 			Connection con = null;
 			Statement st = null;
@@ -162,8 +164,8 @@ public class NominasController extends HttpServlet {
 				st = con.createStatement();
 
 				// Actualizar empleados
-				String sql = "UPDATE empleados SET categoria = " + nuevaCategoria + ", anyos = " + nuevosAnyos
-						+ " WHERE dni = '" + dniEmpleado + "'";
+				   String sql = "UPDATE empleados SET categoria = " + nuevaCategoria + ", anyos = " + nuevosAnyos
+		                    + ", nombre = '" + nuevoNombre + "', sexo = '" + nuevoSexo + "' WHERE dni = '" + dniEmpleado + "'";
 				st.executeUpdate(sql);
 
 			} catch (SQLException e) {
