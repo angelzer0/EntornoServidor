@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.nominas"},{"l":"com.nominas.controllers"},{"l":"com.nominas.exceptions"},{"l":"com.nominas.persistence"},{"l":"com.nominas.services"}];updateSearchResults();

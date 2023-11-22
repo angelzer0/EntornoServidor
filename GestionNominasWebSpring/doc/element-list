@@ -1,0 +1,5 @@
+com.nominas
+com.nominas.controllers
+com.nominas.exceptions
+com.nominas.persistence
+com.nominas.services
